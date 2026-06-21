@@ -1,0 +1,21 @@
+# systemowe śmieci
+*.log
+*.tmp
+*.swp
+*~
+*.bak
+
+# cache (globalnie)
+.cache/
+**/cache/
+
+# sekrety
+.env
+.env.*
+
+# SSH (bezpiecznie wszystko lokalne)
+.ssh/
+
+# edytory
+.vscode/
+.idea/
