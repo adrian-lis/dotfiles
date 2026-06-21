@@ -1,0 +1,133 @@
+format = """
+[](#343f44)\
+$python\
+$username\
+$hostname\
+$sudo\
+[](bg:#3d484d fg:#343f44)\
+$directory\
+[](fg:#3d484d bg:#475258)\
+$git_branch\
+$git_status\
+[](fg:#475258 bg:#3d484d)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+[](fg:#3d484d bg:#343f44)\
+$docker_context\
+[](fg:#343f44 bg:#343f44)\
+$time\
+[ ](fg:#343f44)\
+"""
+command_timeout = 5000
+
+[username]
+show_always = true
+style_user = "bg:#343f44 fg:#a7c080 bold"
+style_root = "bg:#343f44 fg:#e67e80 bold"
+format = '[$user]($style)' # Usunąłem spację po user, żeby @hostname ładnie przylegało
+
+[hostname]
+ssh_only = true
+style = "bg:#343f44 fg:#7fbbb3 bold"
+format = '[_remote_style]($style)[@$hostname ]($style)'
+
+[directory]
+style = "bg:#3d484d fg:#dbbc7f bold"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+".config" = "⚙️ "
+"Video" = "📽️ "
+
+[c]
+symbol = " "
+style = "bg:#3d484d fg:#d195b3"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#343f44 fg:#7fbbb3"
+format = '[ $symbol $context ]($style)$path'
+
+[elixir]
+symbol = " "
+style = "bg:#3d484d fg:#d195b3"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#3d484d fg:#d195b3"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = " "
+style = "bg:#475258 fg:#7fbbb3"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#475258 fg:#e67e80"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:#3d484d fg:#d195b3"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:#3d484d fg:#d195b3"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#3d484d fg:#d195b3"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:#3d484d fg:#d195b3"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = " "
+style = "bg:#3d484d fg:#d195b3"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:#3d484d fg:#d195b3"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+style = "bg:#343f44 fg:#dbbc7f"
+format = '[(\($virtualenv\) )]($style)'
+
+[rust]
+symbol = " "
+style = "bg:#3d484d fg:#d195b3"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:#343f44 fg:#859289" 
+format = '[ $time ]($style)'
+
+[sudo]
+disabled = false
+style = "bg:#343f44 fg:#e67e80 bold" 
+format = '[ ]($style)'
