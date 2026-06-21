@@ -1,21 +1,29 @@
-# systemowe śmieci
+# system trash
 *.log
 *.tmp
 *.swp
 *~
 *.bak
 
-# cache (globalnie)
+# cache
 .cache/
 **/cache/
 
-# sekrety
+# secret's
 .env
 .env.*
 
-# SSH (bezpiecznie wszystko lokalne)
+# SSH
 .ssh/
 
-# edytory
+# editors
 .vscode/
 .idea/
+
+# archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
