@@ -1,4 +1,4 @@
-k#!/bin/bash
+#!/bin/bash
 
 # Folder na cache w pamięci RAM
 CACHE_DIR="/dev/shm/waybar-netspeed"
