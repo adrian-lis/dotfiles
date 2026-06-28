@@ -13,13 +13,14 @@ The repository structure mirrors the home directory (`~/`), making it easy to ba
 - **Waybar** — Status bar with custom modules and scripts
 - **Fastfetch** — System information display
 - **Starship** — Shell prompt configuration
+- **Bash** — Modular shell configuration and custom scripts
 
 ## 📋 Requirements
 
 Install the required packages before applying the configuration:
 
 ```bash
-sudo pacman -Syu playerctl wireguard-tools openresolv copyq
+sudo pacman -Syu playerctl wireguard-tools openresolv copyq fzf bat tree net-tools
 yay -S zscroll-git walker-bin
 ```
 
@@ -57,10 +58,12 @@ If the installer is run again, the backup will be updated with the latest versio
 
 ## 📂 Repository Layout
 
-```bash
+```text
 dotfiles/
 ├── .config/   # Core configuration files (deployed to ~/.config)
 ├── .git/      # Git metadata [Ignored by script]
+├── bash/      # Modular Bash configuration files
+├── .bashrc    # Main Bash configuration (sources files from ~/bash)
 ├── .gitignore # Rules for untracked files [Ignored by script]
 ├── install.sh # Automation setup script [Ignored by script]
 ├── LICENSE    # Project license [Ignored by script]
